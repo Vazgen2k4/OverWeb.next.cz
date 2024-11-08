@@ -39,3 +39,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /src/firebase_config.tsx
+/src/firebase_admin.ts
