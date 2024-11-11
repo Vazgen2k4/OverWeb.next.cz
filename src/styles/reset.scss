@@ -1,0 +1,72 @@
+@use "./variables.scss" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: $primaryFont;
+    color: $primaryColor;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
+}
+
+body {
+    background: $bgColor;
+
+    &._no__scroll {
+        overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #2e0267;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 10px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primaryTitleFont;
+    color: $titleColor;
+}
+
+.container {
+    width: 100%;
+    max-width: #{$containerPadding * 2 + $containerWidth}; 
+    margin: 0 auto;
+    padding: 0 $containerPadding;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.wrapper__content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: #{$containerPadding * 2 + $containerWidth - $navWidth};
+}
