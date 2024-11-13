@@ -1,7 +1,11 @@
 
 
 const LanguageButton = () => {
-    return ;    
+    return (
+        <>
+            =
+        </>
+    );
 }
 
 

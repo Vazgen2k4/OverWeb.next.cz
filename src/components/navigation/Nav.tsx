@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NavSocialList from "./NavSocialList";
 import NavList from "./NavList";
 
 const NavLogo = () => {
@@ -23,37 +24,13 @@ const Nav = () => {
                 <div className="nav__content">
                     <div className="nav__content-bg"></div>
                     <NavLogo />
-                    <ul className="nav__list">
-
-                        <li className="nav__list-element">
-                            <a href="#portfolio" data-lang="portfolio" className="nav__list-link">
-                                Портфолио
-                            </a>
-                        </li>
-
-                        <li className="nav__list-element">
-                            <a href="#about" data-lang="about_me" className="nav__list-link">
-                                Обо мне
-                            </a>
-                        </li>
-
-                        <li className="nav__list-element">
-                            <a href="#skills" data-lang="skills" className="nav__list-link">
-                                Навыки
-                            </a>
-                        </li>
-                        <li className="nav__list-element">
-                            <a href="#footer" data-lang="contact" className="nav__list-link">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
+                    <NavList />
                     <a href="#!" className="btn">
                         <span data-lang="button_order">
                             заказать
                         </span>
                     </a>
-                    <NavList />
+                    <NavSocialList />
                 </div>
             </nav>
         </>

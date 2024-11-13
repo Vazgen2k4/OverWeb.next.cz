@@ -26,12 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="/font-icons/all.min.css"
+        />
+      </head>
       <body>
         <div className="wrapper">
           <ControllsButton />
-
           <Nav />
-          {children}
+          <div className="wrapper__content">
+            {children}
+          </div>
         </div>
       </body>
     </html>

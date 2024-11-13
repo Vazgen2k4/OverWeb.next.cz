@@ -48,7 +48,7 @@ h6 {
 
 .container {
     width: 100%;
-    max-width: #{$containerPadding * 2 + $containerWidth}; 
+    max-width: #{$containerPadding * 2 + $containerWidth};
     margin: 0 auto;
     padding: 0 $containerPadding;
 }
@@ -59,14 +59,66 @@ h6 {
     min-height: 100vh;
     width: 100%;
     max-width: 100vw;
+
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
 }
 
-.wrapper__content {
+.btn {
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    max-width: #{$containerPadding * 2 + $containerWidth - $navWidth};
+    width: max-content;
+    padding: 16px 32px;
+    border: 1px #b88cff solid;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s linear;
+
+    &::after {
+        content: "";
+        display: block;
+        background: $buttonHoverColor;
+        right: 150%;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        transition: right 0.3s linear;
+    }
+
+    @media (hover) {
+        &:hover {
+            transform: scale(0.9);
+            
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+
+    > span {
+        z-index: 1;
+    }
+
+    & .square {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 150%;
+        transform: translateX(0%) skew(-20deg);
+        background: rgba(255, 255, 255, 0.3);
+    }
 }

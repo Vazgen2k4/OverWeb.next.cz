@@ -1,50 +1,39 @@
 
-
 type NavLink = {
-    image: string;
-    forTo: string;
-    path: string;
-    label: string;
-};
+    title: string;
+    link: string;
+
+}
 
 const links: NavLink[] = [
     {
-        image: "icons/github.svg",
-        forTo: "github",
-        path: "https://github.com/Vazgen2k4",
-        label: "Github account",
+        title: "Portfolio",
+        link: "#portfolio",
     },
     {
-        image: "icons/instagram.svg",
-        forTo: "instagram",
-        path: "https://www.instagram.com/overlord2k4/",
-        label: "Instagram account",
+        title: "About",
+        link: "#about",
     },
     {
-        image: "icons/telegram.svg",
-        forTo: "telegram",
-        path: "https://t.me/OverWebBlog",
-        label: "telegram account",
+        title: "Skills",
+        link: "#skills",
     },
-];
-
-
+    {
+        title: "Contact",
+        link: "#contact",
+    },
+]
 
 const NavList = () => {
     return (
         <>
-            <ul className="nav__social">
+            <ul className="nav__list">
                 {links.map((link) => (
-                    <>
-                        <li key={link.forTo} className="nav__social-element">
-                            <a href={link.path} className="nav__social-link" target="_blank">
-                                <img src={link.image} alt={link.label} />
-                            </a>
-                        </li>
-                    </>
+                    <li key={link.title} className="nav__list-element">
+                        <a href={link.link} className="nav__list-link">{link.title}</a>
+                    </li>
                 ))}
             </ul>
-
         </>
     );
 }
