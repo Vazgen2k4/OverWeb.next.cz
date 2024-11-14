@@ -1,11 +1,8 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { adminAuth } from "./firebase_admin";
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 
-export async function middleware(req: NextRequest) {
-  return NextResponse.next();
-}
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ['/', '/(ru|cs|en)/:path*']
 };

@@ -1,0 +1,70 @@
+{
+    "title": "Flutter & Web Developer",
+    "buttons": {
+        "contact": "Contact",
+        "order": "Order",
+        "more": "More"
+    },
+    "portfolio": {
+        "lable": "Portfolio",
+        "title": "Portfolio",
+        "items": [
+            "Project 1",
+            "Project 2",
+            "Project 3",
+            "Project 4"
+        ]
+    },
+    "about": {
+        "lable": "About Me",
+        "title": "About Me",
+        "name": "Vazgen Arutyunyan",
+        "description": [
+            "My journey in IT began in 2017 when I first immersed myself in programming by learning C++ based on expert recommendations. Since then, I have been actively developing in web development, mastering technologies such as HTML5, CSS3, JavaScript with jQuery, Bootstrap 4/5, Node.js, Git, PHP, and Vue.js.",
+            "For the past three years, I have focused on cross-platform application development using Flutter and the Dart programming language. This direction has allowed me to create efficient and modern applications that work across various platforms.",
+            "My goal is to create quality digital solutions that meet modern requirements and help my clients achieve their goals. With each project, I continue to expand my knowledge and skills, staying at the forefront of technology."
+        ]
+    },
+    "services": {
+        "lable": "Services",
+        "title": "We can provide you with services such as:",
+        "list": [
+            "Website layout according to the provided design",
+            "Full-fledged website with conceptual design and prototype",
+            "Support for WordPress websites",
+            "Video editing and processing of various complexity levels",
+            "Custom logo design that sticks in memory",
+            "Cross-platform apps for iOS, Android, and Web"
+        ]
+    },
+    "skills": {
+        "lable":  "Skills",
+        "title": "Skills Stack",
+        "list": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "SASS/SCSS",
+            "LESS",
+            "PHP (7/8)",
+            "WordPress",
+            "Bootstrap (4/5)",
+            "Swiper js",
+            "Node.js",
+            "Dart & Flutter",
+            "S.O.L.I.D."
+        ]
+    }, 
+    "contact": {
+        "lable": "Contact",
+        "title": "Contact Me",
+        "form": {
+            "submit": "Submit"
+        }
+    },
+    "intro": "Cross-platform application and web development.",
+    "overweb": {
+        "title": "OverWeb",
+        "description": "OverWeb is my personal project, which I am developing together with a team of like-minded people. We create comprehensive solutions for web and mobile applications. Each member of our team is a specialist in their field: designers, developers, and video editors. Together, we combine our efforts to achieve the best results in every project."
+    }
+}

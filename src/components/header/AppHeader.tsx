@@ -1,32 +1,35 @@
 "use client"
 
 import FadeInComponent, { AnimationType } from "@/components/animation/FadeInComponent";
+import TypingComponent from "../animation/TypingComponent";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+
+
 
 
 const AppHeader = () => {
+    const t = useTranslations();
+
     return (
         <>
             <header className="header">
                 <div className="container">
                     <div className="header__content">
-                        <FadeInComponent >
+                        <FadeInComponent>
                             <h1 className="header__title" data-lang="title" data-aos="fade-down" data-aos-duration="1500">
                                 Flutter &amp; Web Developer
                             </h1>
                         </FadeInComponent>
 
+                        <TypingComponent
+                            className="header__descr"
+                            text={t('intro')}
+                            animationDuration={2} />
 
-                        <FadeInComponent animationType={AnimationType.BottomToTop}>
-                            <p className="header__descr" data-tuping-text data-lang="intro_text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                        </FadeInComponent>
-
-                        <a href="#!" className="btn">
-                            <span data-lang="contact">
-                                Контакты
-                            </span>
-                        </a>
+                        <Link href="#contact" className="btn">
+                            {t('buttons.contact')}
+                        </Link>
 
                         <i className="fas fa-arrow-down header__icon-scroll"></i>
                     </div>

@@ -30,15 +30,21 @@ const animationConfig: Record<AnimationType, { initial: any, animate: any }> = {
 interface FadeInComponentProps {
     animationType?: AnimationType;
     duration?: number;
-    children: React.ReactNode
+    children: React.ReactNode;
+    className?: string;
 }
 
-const FadeInComponent: React.FC<FadeInComponentProps> = ({ animationType = AnimationType.TopToBottom, duration = 0.6, children }) => {
+const FadeInComponent: React.FC<FadeInComponentProps> = ({
+    animationType = AnimationType.TopToBottom,
+    duration = 0.6,
+    children,
+    className,
+}) => {
     const { initial, animate } = animationConfig[animationType];
 
     return (
         <motion.div
-            
+            className={className}
             initial={initial}
             animate={animate}
             transition={{ duration, ease: 'linear' }}

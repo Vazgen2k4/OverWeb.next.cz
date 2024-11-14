@@ -1,4 +1,6 @@
+import { useTranslations } from 'next-intl';
 import Section from "@/components/section/Section"
+
 
 const portfolioList = [
     {
@@ -33,11 +35,13 @@ const portfolioList = [
     },
 ]
 
-
 const PortfolioSection = () => {
+    const t = useTranslations();
+
+
     return (
         <>
-            <Section sectionId="portfolio" title="Portfolio">
+            <Section sectionId="portfolio" title={t('portfolio.title')}>
                 <div className="portfolio__grid">
                     {portfolioList.map((item) => (
                         <div key={item.title} className="portfolio__card-content" >

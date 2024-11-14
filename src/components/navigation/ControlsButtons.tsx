@@ -1,5 +1,10 @@
+"use client"
+
 import SoundButton from "@/components/buttons/SoundButton";
 import MenuBar from "@/components/buttons/MenuBar";
+import FadeInComponent, { AnimationType } from "../animation/FadeInComponent";
+import LanguageButton, { LanguageButtonData } from "../buttons/LanguageButton";
+
 
 
 type Language = {
@@ -7,6 +12,25 @@ type Language = {
     lang: string;
     label: string;
 }
+
+const LanguageButtonList: LanguageButtonData[] = [
+    {
+        image: "./images/lang/en.png",
+        lang: "en",
+        label: "English",
+    },
+    {
+        image: "./images/lang/cz.png",
+        lang: "cs",
+        label: "Czech",
+    },
+    {
+        image: "./images/lang/ru.png",
+        lang: "ru",
+        label: "Russian",
+    }
+
+]
 
 
 
@@ -16,37 +40,28 @@ const ControllsButton = () => {
 
 
     return (
-        <>
+        <div>
 
             <MenuBar />
 
-            <div className="control__buttons">
+
+
+            <FadeInComponent className="control__buttons" duration={.3} animationType={AnimationType.BottomRightToTopLeft}>
                 <ul className="langs__list">
-                    <li className="langs__list-item">
-                        <a data-lang-btn="ru" href="#!" className="langs__list-btn">
-                            <img src="./images/lang/ru.png" alt="russian" />
-                        </a>
-                    </li>
-                    <li className="langs__list-item">
-                        <a data-lang-btn="cz" href="#!" className="langs__list-btn">
-                            <img src="./images/lang/cz.png" alt="russian" />
-                        </a>
-                    </li>
-                    <li className="langs__list-item">
-                        <a data-lang-btn="en" href="#!" className="langs__list-btn" >
-                            <img src="./images/lang/en.png" alt="russian" />
-                        </a>
-                    </li>
+                    {LanguageButtonList.map((data) => (
+                        <LanguageButton key={data.lang} data={data} />
+                    ))}
                 </ul>
 
 
                 <SoundButton />
+            </FadeInComponent>
 
 
-            </div>
 
 
-        </>
+
+        </div>
     );
 };
 
