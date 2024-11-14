@@ -28,7 +28,9 @@ const AppHeader = () => {
                             animationDuration={2} />
 
                         <Link href="#contact" className="btn">
-                            {t('buttons.contact')}
+                            <span>
+                                {t('buttons.contact')}
+                            </span>
                         </Link>
 
                         <i className="fas fa-arrow-down header__icon-scroll"></i>
