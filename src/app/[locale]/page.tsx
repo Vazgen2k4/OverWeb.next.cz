@@ -1,5 +1,6 @@
 import AppHeader from "@/components/header/AppHeader";
-import PortfolioSection from "@/components/portfolio/PortfolioSection";
+import AboutSection from "@/components/section/about/AboutSection";
+import PortfolioSection from "@/components/section/portfolio/PortfolioSection";
 
 export default function Home() {
 
@@ -8,6 +9,7 @@ export default function Home() {
       <AppHeader />
       <main className="main">
         <PortfolioSection />
+        <AboutSection />
       </main>
     </>
   );

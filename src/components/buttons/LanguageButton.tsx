@@ -1,5 +1,5 @@
 import { useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React, { MouseEvent } from 'react';
 interface LanguageButtonData {
     lang: string;
@@ -12,7 +12,7 @@ export type { LanguageButtonData };
 const LanguageButton = ({ data }: { data: LanguageButtonData }) => {
     const router = useRouter();
     const locale = useLocale();
-
+    const pathname = usePathname();
     const isDisabled = locale === data.lang;
 
     const handle = (e: MouseEvent) => {
@@ -23,7 +23,9 @@ const LanguageButton = ({ data }: { data: LanguageButtonData }) => {
         }
 
         const newLocale = data.lang;
-        router.push(`/${newLocale}`);
+        const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+
+        router.push(newPathname);
     };
 
     return (

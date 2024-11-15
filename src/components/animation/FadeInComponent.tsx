@@ -1,7 +1,7 @@
 "use client"
 
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
 
 enum AnimationType {
     TopToBottom = 'topToBottom',
@@ -40,13 +40,17 @@ const FadeInComponent: React.FC<FadeInComponentProps> = ({
     children,
     className,
 }) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
     const { initial, animate } = animationConfig[animationType];
 
     return (
         <motion.div
+            ref={ref}
             className={className}
             initial={initial}
-            animate={animate}
+            animate={isInView ? animate : initial}
             transition={{ duration, ease: 'linear' }}
         >
             {children}

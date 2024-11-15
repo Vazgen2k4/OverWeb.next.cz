@@ -25,7 +25,7 @@ const AppHeader = () => {
                         <TypingComponent
                             className="header__descr"
                             text={t('intro')}
-                            animationDuration={2} />
+                            duration={2} />
 
                         <Link href="#contact" className="btn">
                             <span>

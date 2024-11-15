@@ -15,17 +15,17 @@ type Language = {
 
 const LanguageButtonList: LanguageButtonData[] = [
     {
-        image: "./images/lang/en.png",
+        image: "/images/lang/en.png",
         lang: "en",
         label: "English",
     },
     {
-        image: "./images/lang/cz.png",
+        image: "/images/lang/cz.png",
         lang: "cs",
         label: "Czech",
     },
     {
-        image: "./images/lang/ru.png",
+        image: "/images/lang/ru.png",
         lang: "ru",
         label: "Russian",
     }
