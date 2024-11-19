@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import { AuthContextProvider } from "@/firebase/AuthContext";
 
 
 export const metadata: Metadata = {
@@ -53,13 +54,15 @@ async function RootLayout({
 
       <body>
         <div className="wrapper">
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <ControllsButton />
-            <Nav />
-            <div className="wrapper__content">
-              {children}
-            </div>
-          </NextIntlClientProvider>
+          <AuthContextProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <ControllsButton />
+              <Nav />
+              <div className="wrapper__content">
+                {children}
+              </div>
+            </NextIntlClientProvider>
+          </AuthContextProvider>
         </div>
       </body>
     </html>

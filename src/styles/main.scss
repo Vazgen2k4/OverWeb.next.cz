@@ -132,12 +132,13 @@ section.section {
                 position: absolute;
                 left: 0;
                 top: 0;
-                height: 0;
                 width: 3px;
-                transition:  .01s ease-out;
-                background: linear-gradient(to bottom, $primary-bg , $buttonHoverColor , red );
+                height: 100%;
+                max-height: 100%;
+                background: linear-gradient(to bottom, $primary-bg, $buttonHoverColor, red);
+                
             }
-            
+
             &-item {
                 p {
                     font-weight: 400;
@@ -292,7 +293,6 @@ section.section {
         width: 100%;
         flex-direction: column;
         justify-content: center;
-        gap: 50px;
     }
 
     &__grid {
@@ -342,10 +342,6 @@ section.section {
             position: absolute;
         }
 
-        &-title {
-            transform: translateY(-100px);
-            opacity: 0;
-        }
 
         &-descr {
             transform: translate(0%, 100px);

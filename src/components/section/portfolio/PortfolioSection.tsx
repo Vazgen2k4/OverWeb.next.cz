@@ -1,12 +1,7 @@
 "use client"
-import { useLocale, useTranslations } from 'next-intl';
 import Section from "@/components/section/Section"
-import Link from 'next/link';
 import FadeInComponent, { AnimationType } from '../../animation/FadeInComponent';
 import PortfolioItem, { PortfolioItemData } from './PortfolioItem';
-
-
-
 
 
 const portfolioList: PortfolioItemData[] = [
@@ -63,11 +58,10 @@ const getAnimationType = (index: number) => {
 
 
 const PortfolioSection = () => {
-    const t = useTranslations();
 
     return (
         <>
-            <Section sectionId="portfolio" title={t('portfolio.title')}>
+            <Section sectionId="portfolio">
                 <div className="portfolio__grid">
                     {
                         portfolioList.map((item: PortfolioItemData, index) => (

@@ -35,12 +35,18 @@ const TypingComponent = ({ className, text, duration, delay = 0 }: Readonly<Typi
         }, delay * 1000);
 
         return () => clearTimeout(startTyping);
-    }, [text, isInView]); 
+    }, [text, isInView]);
 
     return (
-        <p ref={ref} className={`${className} typing`}>
-            {displayedText}
-        </p>
+        <div ref={ref} className={`${className} typing`}>
+            <p className='typing__content'>
+                {text}
+            </p>
+
+            <p className="typing__abs">
+                {displayedText}
+            </p>
+        </div>
     );
 };
 

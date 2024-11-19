@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import Section from "../Section";
 import Link from "next/link";
 import AboutDescrList from "./AboutDescrList";
-// import { log } from "console";
 const _link = "https://github.com/Vazgen2k4";
 
 
@@ -12,7 +11,7 @@ const AboutSection = () => {
 
     return (
         <>
-            <Section sectionId="about" title={t('about.title')}>
+            <Section sectionId="about">
                 <div className="about__body">
                     <div className="about__info">
                         <h3 className="about__info-title" data-lang="name">

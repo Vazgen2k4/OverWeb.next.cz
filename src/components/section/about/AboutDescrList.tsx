@@ -3,29 +3,18 @@
 import { about } from '../../../../messages/en.json';
 import { useTranslations } from 'next-intl';
 import TypingComponent from '@/components/animation/TypingComponent';
-import { useEffect, useRef, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const length = about.description.length;
 const duration = 2;
-const totalDuration = length * duration * 1000;
+const totalDuration = (length) * duration;
 
 
 const AboutDescrList = () => {
     const t = useTranslations();
-    const controls = useAnimation();
     const ref = useRef<HTMLUListElement>(null);
-
-    useEffect(() => {
-
-        setTimeout(() => {
-            if (ref.current) {
-
-                controls.start({ height: `${ref.current.offsetHeight}px` });
-            }
-        }, totalDuration);
-
-    }, [controls]);
+    const isInView = useInView(ref, { once: true });
 
     return (
         <ul ref={ref} className="about__info-list about__list">
@@ -33,8 +22,9 @@ const AboutDescrList = () => {
             <motion.div
                 className="border"
                 initial={{ height: 0 }}
-                animate={controls}
-                transition={{ duration: .3 }}
+                animate={isInView ? { height: "100%" } : { height: 0 }}
+                transition={{ duration: totalDuration, ease: 'linear' }}
+
             />
 
             {Array.from({ length }, (_, index) => (
@@ -43,7 +33,7 @@ const AboutDescrList = () => {
                         className='about__item-descr'
                         text={t(`about.description.${index}`)}
                         duration={duration}
-                        delay={index * duration} // Задержка для каждого параграфа
+                        delay={index * duration}
                     />
                 </li>
             ))}

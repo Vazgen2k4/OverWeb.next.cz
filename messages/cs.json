@@ -66,5 +66,6 @@
   "overweb": {
     "title": "OverWeb",
     "description": "OverWeb je můj projekt, který rozvíjím společně s týmem podobně smýšlejících lidí. Zabýváme se vytvářením komplexních řešení pro webové a mobilní aplikace. Každý člen našeho týmu je odborníkem ve svém oboru: designéři, vývojáři a střihači. Společně spojujeme své úsilí, abychom dosáhli nejlepších výsledků v každém projektu."
-  }
+  },
+  "loading": "Načítání..."
 }

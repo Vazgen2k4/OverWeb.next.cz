@@ -66,5 +66,6 @@
     "overweb": {
         "title": "OverWeb",
         "description": "OverWeb is my personal project, which I am developing together with a team of like-minded people. We create comprehensive solutions for web and mobile applications. Each member of our team is a specialist in their field: designers, developers, and video editors. Together, we combine our efforts to achieve the best results in every project."
-    }
+    },
+    "loading": "Loading..."
 }
