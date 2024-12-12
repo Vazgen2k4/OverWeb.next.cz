@@ -1,0 +1,71 @@
+{
+  "title": "Flutter & Web Vývojář",
+  "intro": "Vývoj multiplatformních aplikací a webových řešení.",
+  "buttons": {
+    "contact": "Kontakt",
+    "order": "Objednat",
+    "more": "Více"
+  },
+  "portfolio": {
+    "lable": "Portfolio",
+    "title": "Portfolio",
+    "items": [
+      "Projekt 1",
+      "Projekt 2",
+      "Projekt 3",
+      "Projekt 4"
+    ]
+  },
+  "about": {
+    "lable": "O mně",
+    "title": "O mně",
+    "name": "Vazgen Arutyunyan",
+    "description": [
+      "Moje cesta v IT začala v roce 2017, kdy jsem se poprvé ponořil do programování a učil se C++ na základě doporučení \"expertů\". Od té doby se aktivně rozvíjím v oblasti webového vývoje a osvojil jsem si technologie jako HTML5, CSS3, JavaScript s jQuery, Bootstrap 4/5, Node.js, Git, PHP a Vue.js.",
+      "Za poslední tři roky jsem se zaměřil na vývoj multiplatformních aplikací pomocí Flutteru a programovacího jazyka Dart. Tato oblast mi umožnila vytvářet efektivní a moderní aplikace, které fungují na různých platformách.",
+      "Mým cílem je vytvářet kvalitní digitální řešení, která odpovídají moderním požadavkům a pomáhají mým klientům dosahovat jejich cílů. S každým projektem pokračuji v rozšiřování svých znalostí a dovedností, abych zůstal v čele technologií."
+    ]
+  },
+  "services": {
+    "lable": "Services",
+    "title": "Můžeme vám poskytnout služby, jako jsou:",
+    "list": [
+      "Web podle hotového návrhu",
+      "Web na klíč s konceptuálním designem a prototypem",
+      "Podpora webu na WordPress",
+      "Úprava a střih videí různých úrovní složitosti",
+      "Vývoj individuálního designu loga, které zůstane v paměti",
+      "Vytváření multiplatformních aplikací pro iOS, Android a Web"
+    ]
+  },
+  "skills": {
+    "lable": "Zkušenosti",
+    "title": "Technologický Stack",
+    "list": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "SASS/SCSS",
+      "LESS",
+      "PHP (7/8)",
+      "WordPress",
+      "Bootstrap (4/5)",
+      "Swiper js",
+      "Node.js",
+      "Dart & Flutter",
+      "S.O.L.I.D."
+    ]
+  },
+  "contact": {
+    "lable": "Kontakty",
+    "title": "Kontaktujte mě",
+    "form": {
+      "submit": "Odeslat"
+    }
+  },
+  "overweb": {
+    "title": "OverWeb",
+    "description": "OverWeb je můj projekt, který rozvíjím společně s týmem podobně smýšlejících lidí. Zabýváme se vytvářením komplexních řešení pro webové a mobilní aplikace. Každý člen našeho týmu je odborníkem ve svém oboru: designéři, vývojáři a střihači. Společně spojujeme své úsilí, abychom dosáhli nejlepších výsledků v každém projektu."
+  },
+  "loading": "Načítání..."
+}
