@@ -23,7 +23,7 @@ const AboutDescrList = () => {
                 className="border"
                 initial={{ height: 0 }}
                 animate={isInView ? { height: "100%" } : { height: 0 }}
-                transition={{ duration: totalDuration, ease: 'linear' }}
+                transition={{ duration: totalDuration }}
 
             />
 

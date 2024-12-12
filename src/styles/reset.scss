@@ -227,3 +227,21 @@ h6 {
         }
     }
 }
+
+
+input, textarea {
+    &._disable {
+        display: none;
+    }
+
+    background: #2c0e53;
+    border: 1px solid $buttonHoverColor;
+    padding: 19px 15px;
+    outline: none;
+    resize: none;
+    transition: all 0.3s linear;
+
+    &:focus {
+        border-color: #fff;
+    }
+}

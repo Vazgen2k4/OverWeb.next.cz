@@ -1,8 +1,10 @@
 "use client"
+import AppHeader from "@/components/header/AppHeader";
 import LoadingComponent from "@/components/LoadingComponent";
 import { useAuth } from "@/firebase/AuthContext";
 import { redirect } from "next/navigation";
 import { useEffect } from "react";
+import AdminSkillsSection from "./AdminSkillsSection";
 
 
 const AuthButton = () => {
@@ -41,16 +43,13 @@ const AdminPage = () => {
     }, [user, loading, role]);
 
     if (loading) {
+        return <LoadingComponent />;
     }
-    
-    return <LoadingComponent />;
+
     return (
         <>
             <div className="admin">
-                <div>
-                    {user == null && <AuthButton />}
-                    {user && <LogOutButton />}
-                </div>
+                <AdminSkillsSection />
             </div>
         </>
     );
