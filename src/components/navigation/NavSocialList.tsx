@@ -7,19 +7,19 @@ type NavSocialLink = {
 
 const links: NavSocialLink[] = [
     {
-        image: "icons/github.svg",
+        image: "/icons/github.svg",
         forTo: "github",
         path: "https://github.com/Vazgen2k4",
         label: "Github account",
     },
     {
-        image: "icons/instagram.svg",
+        image: "/icons/instagram.svg",
         forTo: "instagram",
         path: "https://www.instagram.com/overlord2k4/",
         label: "Instagram account",
     },
     {
-        image: "icons/telegram.svg",
+        image: "/icons/telegram.svg",
         forTo: "telegram",
         path: "https://t.me/OverWebBlog",
         label: "telegram account",

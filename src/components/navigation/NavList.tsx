@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 type NavLink = {
     title: string;
@@ -7,30 +9,37 @@ type NavLink = {
 
 const links: NavLink[] = [
     {
-        title: "Portfolio",
+        title: "portfolio.lable",
         link: "#portfolio",
     },
     {
-        title: "About",
+        title: "about.lable",
         link: "#about",
     },
     {
-        title: "Skills",
+        title: "skills.lable",
         link: "#skills",
     },
     {
-        title: "Contact",
+        title: "services.lable",
+        link: "#services",
+    },
+    {
+        title: "contact.lable",
         link: "#contact",
     },
 ]
 
 const NavList = () => {
+
+    const t = useTranslations();
+
     return (
         <>
             <ul className="nav__list">
                 {links.map((link) => (
                     <li key={link.title} className="nav__list-element">
-                        <a href={link.link} className="nav__list-link">{link.title}</a>
+                        <Link href={link.link} className="nav__list-link">{t(link.title)}</Link>
                     </li>
                 ))}
             </ul>

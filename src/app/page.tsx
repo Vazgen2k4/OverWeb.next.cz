@@ -1,13 +1,5 @@
-import AppHeader from "@/components/header/AppHeader";
-import PortfolioSection from "@/components/portfolio/PortfolioSection";
+import { redirect } from "next/navigation"
 
-export default function Home() {
-  return (
-    <>
-      <AppHeader/>
-      <main className="main">
-        <PortfolioSection />
-      </main>
-    </>
-  );
+export default function RootPage() {
+    redirect('/en');
 }

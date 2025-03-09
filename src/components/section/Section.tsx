@@ -1,20 +1,22 @@
+import { useTranslations } from "next-intl";
 
 interface SectionProps {
     sectionId: string;
     children: React.ReactNode;
-    title: string;
     descr?: string;
 }
 
 
-const Section: React.FC<SectionProps> = ({ sectionId, title, children, descr }) => {
+const Section: React.FC<SectionProps> = ({ sectionId, children, descr }) => {
+    const t = useTranslations()
+    
     return (
         <>
             <section className={`section ${sectionId}`} id={sectionId}>
                 <div className="container">
                     <div className={`${sectionId}__content`}>
                         <div className="studio__content-text">
-                            <h2 className="section__title" data-lang="title">{title}</h2>
+                            <h2 className="section__title">{t(`${sectionId}.title`)}</h2>
                             {
                                 descr &&
                                 <p className="studio__content-deskr">

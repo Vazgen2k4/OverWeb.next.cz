@@ -1,11 +1,11 @@
 @media (hover) {
     .langs__list-btn {
-        transition: all .3s linear;
+        transition: all 0.3s linear;
     }
-    
+
     .langs__list-btn:not(._disable):hover {
         box-shadow: 0 0 10px rgba(204, 197, 197, 0.845);
-        transform: scale(.8);
+        transform: scale(0.8);
     }
 }
 
@@ -15,8 +15,8 @@
         row-gap: 26px;
     }
 
-    .portfolio__card:nth-child(3n + 2) .portfolio__card-content {
-        transform: unset;
+    .portfolio__card:nth-child(3n + 2) {
+        top: unset;
     }
 
     .footer__content {
@@ -27,31 +27,30 @@
         width: 100%;
         max-width: 600px;
     }
-
-
 }
 
 @media (max-width: 1150px) {
-    .about__content {
+    .about__body {
         flex-direction: column-reverse;
         margin-top: 50px;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
     }
 
     .about__info {
         align-self: flex-end;
     }
-
-    .about__images {
-        align-self: flex-start;
-    }
 }
 
 @media (max-width: 992px) {
-    
+    section.section {
+        max-width: 100vw;
+    }
     .wrapper__content {
         max-width: unset;
     }
-    
+
     .nav {
         position: fixed;
         z-index: 1000;
@@ -59,7 +58,6 @@
         width: 100%;
         background: transparent;
     }
-
 
     body._no__scroll .nav {
         left: 0;
@@ -70,7 +68,7 @@
         width: 320px;
         box-shadow: 0 0 10px black;
         justify-content: flex-start;
-        gap: 50px;
+        gap: clamp(20px, 4vw, 50px);
     }
 
     .bars {
@@ -81,23 +79,23 @@
         border-radius: 50%;
     }
 
-    body._no__scroll .bars>.burger {
+    body._no__scroll .bars > .burger {
         width: 60%;
     }
 
-    body._no__scroll .bars>.burger::before,
-    body._no__scroll .bars>.burger::after {
+    body._no__scroll .bars > .burger::before,
+    body._no__scroll .bars > .burger::after {
         width: 70%;
         left: -2px;
         right: unset;
     }
 
-    body._no__scroll .bars>.burger::before {
+    body._no__scroll .bars > .burger::before {
         transform: rotateZ(-45deg);
         bottom: 3.5px;
     }
 
-    body._no__scroll .bars>.burger::after {
+    body._no__scroll .bars > .burger::after {
         transform: rotateZ(45deg);
         top: 3px;
     }
@@ -111,7 +109,6 @@
 
     .portfolio__card-descr {
         color: var(--primaryColor);
-
     }
 
     .portfolio__card-content {
@@ -126,6 +123,7 @@
 
 @media (max-width: 890px) {
     .portfolio__grid {
+        margin: 0 auto;
         grid-template-columns: repeat(1, minmax(250px, 500px));
     }
 }
@@ -159,16 +157,12 @@
         grid-template-columns: repeat(1, 280px);
         justify-content: center;
     }
-}
-
-@media (max-width: 565px) {
     .about__images {
-        display: none;
+        width: 80%;
     }
 }
 
 @media (max-width: 550px) {
-
     .about__content {
         margin-top: 15px;
     }
@@ -188,6 +182,7 @@
 @media (max-width: 400px) {
     .header__content {
         align-items: center;
+        width: 100%;
     }
 
     .header__descr {
