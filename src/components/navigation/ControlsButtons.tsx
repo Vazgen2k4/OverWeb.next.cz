@@ -35,16 +35,11 @@ const LanguageButtonList: LanguageButtonData[] = [
 
 
 
-const ControllsButton = () => {
-
-
-
+const ControlsButton = () => {
     return (
         <div>
 
             <MenuBar />
-
-
 
             <FadeInComponent className="control__buttons" duration={.3} animationType={AnimationType.BottomRightToTopLeft}>
                 <ul className="langs__list">
@@ -53,16 +48,11 @@ const ControllsButton = () => {
                     ))}
                 </ul>
 
-
                 <SoundButton />
             </FadeInComponent>
-
-
-
-
 
         </div>
     );
 };
 
-export default ControllsButton;
+export default ControlsButton;

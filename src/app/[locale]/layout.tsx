@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "/src/styles/_globals.scss";
 import Nav from "@/components/navigation/Nav";
-import ControllsButton from "@/components/navigation/ControlsButtons";
+import ControlsButton from "@/components/navigation/ControlsButtons";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -56,7 +56,7 @@ async function RootLayout({
         <div className="wrapper">
           <AuthContextProvider>
             <NextIntlClientProvider locale={locale} messages={messages}>
-              <ControllsButton />
+              <ControlsButton />
               <Nav />
               <div className="wrapper__content">
                 {children}
